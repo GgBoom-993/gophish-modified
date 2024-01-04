@@ -12,5 +12,7 @@ Gophish: Open-Source Phishing Toolkit
 ## Contents of the modification
 
 Replaces some specially recognizable strings.
+
 Replaced the name of the parameter used for tracing
+
 Added trackable QR code template , {{.EURL}}
