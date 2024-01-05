@@ -81,7 +81,7 @@ func NewPhishingTemplateContext(ctx TemplateContext, r BaseRecipient, rid string
   // 调用替换函数
   newURL := replaceIPWithDomain(phishURL.String(), ipMap)  
 
-  apiURL := "http://qrcode.hlcode.cn/beautify/style/create?bgColor=%23FFFFFF&bodyType=1&content=" + newURL + "&down=0&embedPosition=0&embedText=&embedTextColor=%23000000&embedTextSize=38&eyeInColor=%23000000&eyeOutColor=%23000000&eyeType=8&eyeUseFore=1&fontFamily=0&foreColor=%23000000&foreColorImage=&foreColorTwo=&foreType=0&frameColor=&gradientWay=0&level=H&logoShadow=0&logoShap=2&logoUrl=&margin=2&rotate=30&size=400&format=1&qrCodeId=0"
+  apiURL := "http://qrcode.hlcode.cn/beautify/style/create?bgColor=%23FFFFFF&bodyType=1&content=" + newURL + "&down=0&embedPosition=0&embedText=&embedTextColor=%23000000&embedTextSize=38&eyeInColor=%23000000&eyeOutColor=%23000000&eyeType=8&eyeUseFore=1&fontFamily=0&foreColor=%23000000&foreColorImage=&foreColorTwo=&foreType=0&frameColor=&gradientWay=0&level=H&logoShadow=0&logoShap=1&logoUrl=https:%2F%2Foss.hlcode.cn%2Fserver%2F2024%2F01%2F04%2F164890235818.png&margin=2&rotate=30&size=400&qrCodeId=0&format=1"
   
   imageURL, err := GetQRCodeImageURL(apiURL)
   base64DataURL, err := convertImageToBase64(imageURL)
