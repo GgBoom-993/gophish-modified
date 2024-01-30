@@ -19,12 +19,13 @@ sed -i 's/const ServerName = "gophish"/const ServerName = "mailServer"/' config/
 ```
 
 **Replaced the name of the parameter used for tracing**
+
 rid -> ac
 ```
 sed -i 's/const RecipientParameter = "rid"/const RecipientParameter = "ac"/g' models/campaign.go
 ```
 
-**Added trackable QR code template , {{.EURL}}**
+**Added trackable QR code template {{.EURL}}**
 ```
 modified file: ./models/template_context.go
 ```
