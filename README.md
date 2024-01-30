@@ -11,8 +11,25 @@ Gophish: Open-Source Phishing Toolkit
 
 ## Contents of the modification
 
-Replaces some specially recognizable strings.
+**Replaces some specially recognizable strings.**
+```
+find . -type f -exec sed -i 's/X-Gophish-Contact/X-Contact/g' {} +
+find . -type f -exec sed -i 's/X-Gophish-Signature/X-Signature/g' {} +
+sed -i 's/const ServerName = "gophish"/const ServerName = "mailServer"/' config/config.go
+```
 
-Replaced the name of the parameter used for tracing
+**Replaced the name of the parameter used for tracing**
+rid -> ac
+```
+sed -i 's/const RecipientParameter = "rid"/const RecipientParameter = "ac"/g' models/campaign.go
+```
 
-Added trackable QR code template , {{.EURL}}
+**Added trackable QR code template , {{.EURL}}**
+```
+modified file: ./models/template_context.go
+```
+
+**Added function to customize request headers**
+```
+modified file: ./controllers/phish.go
+```
