@@ -34,3 +34,15 @@ modified file: ./models/template_context.go
 ```
 modified file: ./controllers/phish.go
 ```
+
+**Change the port of the management panel and allow access from any address.**
+
+
+./config.json
+```
+{
+	"admin_server": {
+		"listen_url": "0.0.0.0:8333",
+…………}
+}
+```
