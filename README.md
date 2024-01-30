@@ -1,6 +1,6 @@
 ![gophish logo](https://raw.github.com/gophish/gophish/master/static/images/gophish_purple.png)
 
-Gophish - modified
+Gophish
 =======
 
 ![Build Status](https://github.com/gophish/gophish/workflows/CI/badge.svg) [![GoDoc](https://godoc.org/github.com/gophish/gophish?status.svg)](https://godoc.org/github.com/gophish/gophish)
@@ -9,13 +9,25 @@ Gophish: Open-Source Phishing Toolkit
 
 [Gophish](https://getgophish.com) is an open-source phishing toolkit designed for businesses and penetration testers. It provides the ability to quickly and easily setup and execute phishing engagements and security awareness training.
 
-In this project, I have modified gophishi v0.12.1 by modifying some basic features of gophish to make it less detectable by security devices. Since only very simple modifications were made, there is no guarantee that it is completely hidden.
+
+
+## Gophish - modified
+
+- **Removal of some features**
+
+This project  modified by gophishi v0.12.1 and modifying some basic characteristic of gophish to make it less detectable by security devices. Since only very simple modifications were made, there is no guarantee that it is completely hidden.
+
+- **Trackable QR code templates**
 
 With the development of diverse email phishing exercises, we no longer only use the traditional spoofing methods of clicking on a link or downloading an attachment. More and more scenarios induce users to scan malicious QR codes. Based on gophish's template capability, new QR code templates that can track each user have been added, simply by adding placeholders in the right places \<img src={\{.EURL}}>
 
+- **Personalization**
+
 The other changes are my personal thoughts. You can refer to the details of the changes below and make your own modifications.
 
-## Contents of the modification
+
+
+## Details of the modifications
 
 **Replaces some specially recognizable strings.**
 ```
@@ -58,4 +70,5 @@ modified file: ./controllers/phish.go
 I referenced the following articles for my revisions and thank the authors for their selfless sharing.
 
 https://www.sprocketsecurity.com/resources/never-had-a-bad-day-phishing-how-to-set-up-gophish-to-evade-security-controls
+
 https://mp.weixin.qq.com/s/EjrInb7bVMZP2ZOtNXUY5w
